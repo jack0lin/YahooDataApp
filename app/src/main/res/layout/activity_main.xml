@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.designreactor.sb.MainActivity">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:layout_toLeftOf="@+id/refresh"
+        android:layout_toStartOf="@+id/refresh"
+        android:text="Add"
+        android:layout_weight="1"
+        android:textAllCaps="false"/>
+
+    <LinearLayout
+        android:id="@+id/continer"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/linearLayout"
+        android:layout_toRightOf="@+id/linearLayout"
+        android:hint="symbol"
+        android:layout_weight="1"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/rows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/symbol"
+        android:layout_alignBottom="@+id/symbol"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/symbol"
+        android:layout_toRightOf="@+id/symbol"
+        android:hint="Days"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:layout_weight="1"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn"
+        android:layout_alignBottom="@+id/btn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:text="Refresh"
+        android:layout_weight="1"
+        android:textAllCaps="false"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+
+    </LinearLayout>
+
+    <!--<ImageView-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@color/colorPrimary"/>-->
+
+</RelativeLayout>
