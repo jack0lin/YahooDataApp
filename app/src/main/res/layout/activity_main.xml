@@ -13,15 +13,14 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="14dp"
         android:layout_toLeftOf="@+id/refresh"
-        android:layout_toStartOf="@+id/refresh"
-        android:text="Add"
-        android:layout_weight="1"
-        android:textAllCaps="false"/>
+        android:text="@string/add"
+        android:textAllCaps="false" android:layout_toStartOf="@+id/refresh" />
 
     <LinearLayout
         android:id="@+id/continer"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
 
         android:orientation="horizontal">
 
@@ -29,33 +28,32 @@
 
     <EditText
         android:id="@+id/symbol"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/btn"
         android:layout_marginLeft="15dp"
         android:layout_marginStart="15dp"
-        android:layout_toEndOf="@+id/linearLayout"
-        android:layout_toRightOf="@+id/linearLayout"
-        android:hint="symbol"
-        android:layout_weight="1"
-        android:singleLine="true" />
+        android:layout_marginRight="15dp"
+        android:singleLine="true"
+        android:hint="@string/symbol" />
+
+        <!--android:hint="@string/symbol"-->
+        <!--android:singleLine="true" />-->
 
     <EditText
         android:id="@+id/rows"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/symbol"
         android:layout_alignBottom="@+id/symbol"
-        android:layout_marginLeft="14dp"
-        android:layout_marginStart="14dp"
-        android:layout_toEndOf="@+id/symbol"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
         android:layout_toRightOf="@+id/symbol"
-        android:hint="Days"
+        android:hint="@string/days"
         android:inputType="number"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:layout_weight="1"
-        android:textAllCaps="false" />
+        android:textAllCaps="false" android:layout_toEndOf="@+id/symbol" />
 
     <Button
         android:id="@+id/refresh"
@@ -67,20 +65,8 @@
         android:layout_alignParentRight="true"
         android:layout_marginEnd="17dp"
         android:layout_marginRight="17dp"
-        android:text="Refresh"
-        android:layout_weight="1"
+        android:text="@string/refresh"
         android:textAllCaps="false"/>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="80dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:visibility="gone">
-
-    </LinearLayout>
 
     <!--<ImageView-->
         <!--android:layout_width="100dp"-->
