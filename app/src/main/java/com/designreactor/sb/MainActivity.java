@@ -1,23 +1,17 @@
 package com.designreactor.sb;
 
-import android.content.Intent;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.io.File;
 import java.io.IOException;
 
 import okhttp3.OkHttpClient;
@@ -124,12 +118,39 @@ public class MainActivity extends AppCompatActivity {
         }).start();
     }
 
+
+    private void getcsvfile() {
+        Toast.makeText(this, "Getting csv file...", Toast.LENGTH_LONG).show();
+        Log.e("TAG", "go");
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String url = "https://www.baidu.com";
+                Request request = new Request.Builder()
+                        .url(url)
+                        .header("cookie", "abc")
+                        .build();
+                OkHttpClient client = new OkHttpClient();
+                try {
+
+                    Response response = client.newCall(request).execute();
+                    Log.e("TAG", "response " + response.body().string());
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+
+
     int t_id = 2;
 
     private void ShowData( LinearLayout Layout) {
 
 
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(200, 1400 ,1);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(200, 850 ,1);
         params.setMargins(20,20, 0, 0);
 
         String symbol = "string";
@@ -156,13 +177,7 @@ public class MainActivity extends AppCompatActivity {
                 LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(200, 30);
                 params2.setMargins(5, 5, 0, 0);
 
-//            Layout.setLayoutParams(params2);
-//            Layout.setOrientation(LinearLayout.VERTICAL);
-
                 t_id += 1;
-
-//            EditText editText = findViewById(R.id.symbol);
-//            String text = editText.getText().toString();
 
                 textView.setText(symbol);
                 Layout2.addView(textView, params);
